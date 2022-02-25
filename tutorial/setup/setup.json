@@ -1,0 +1,33 @@
+{
+    "name": "Tutorial",
+    "detectors": [
+        {
+            "name": "Det2",
+            "file": "AUW1_60_00.json",
+            "calibration": "Det2.cal",
+            "position": {"y": "0 mm", "x": "-32 mm", "z": "0 mm"},
+            "normal": {"y": "0 mm", "x": "1 mm", "z": "0 mm"},
+            "orientation": {"y": "1 mm", "x": "0 mm", "z": "0 mm"},
+            "frontMapping": {
+                "tdc": "_T",
+                "multiplicity": "",
+                "prefix": "DET2F",
+                "segment": "I",
+                "adc": "_E"
+            },
+            "backMapping": {
+                "tdc": "_T",
+                "multiplicity": "",
+                "prefix": "DET2B",
+                "segment": "I",
+                "adc": "_E"
+            }
+        }
+    ],
+    "signals": [
+        "CLOCK",
+        "CHARGE",
+        "ACCEPTED",
+        "TOTAL"
+    ]
+}

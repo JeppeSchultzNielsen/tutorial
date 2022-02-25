@@ -1,0 +1,325 @@
+Log file for run: 1063
+Current time is: 13:38:07
+--------------- VMELIB CONFIG ---------------
+log_level = info
+
+CRATE("TESTING", 0) {
+  acvt = false
+  multi_event = true
+  GSI_VULOM(0x02000000) {
+    trlo2_timestamper = true
+    trlo2_timerlatcher = true
+    trlo2_master = true
+  }
+  CAEN_V785(0x200000) {		
+  threshold = (300 {32})
+  }
+  CAEN_V785(0x210000) {
+  threshold = (300 {32})
+  }
+  CAEN_V785(0x220000) {
+  threshold = (300 {32})
+  }
+  CAEN_V785(0x230000) {
+  threshold = (300 {32})
+  }
+  CAEN_V785(0x240000) {
+  threshold = (300 {32})
+  }
+  CAEN_V785(0x250000) {
+  threshold = (150 {32})
+  }
+  BARRIER
+  CAEN_V1190(0x400000) {
+    GATE {
+      time_after_trigger = -1500ns
+      width = 1600ns
+    }
+  }
+  BARRIER
+  CAEN_V830(0x300000) {
+    channel_enable = (0,2,4,6)
+  }	
+}
+
+--------------- VMELIB DONE   ---------------
+-------------- MESYTEC CONFIG ---------------
+
+/dev/ttyUSB0
+==================================
+  mesytec global controller       
+     IEM/CSIC 2011                
+ (aperea@iem.cfmac.csic.es)       
+==================================
+opening serial port... (/dev/ttyUSB0, 115200 bps) ok.
+Modules on BUS 0
+  ---------------------------
+   module 0 values
+
+  channel  1: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  2: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  3: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  4: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  5: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  6: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  7: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  8: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel  9: gain 9 (x 5.987), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 10: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel 11: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel 12: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel 13: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel 14: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel 15: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 70
+  channel 16: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  ----------------------------
+  ---------------------------
+   module 1 values
+
+  channel  1: gain 9 (x 5.987), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel  2: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  3: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  4: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  5: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  6: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  7: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  8: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 70
+  channel  9: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 10: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 11: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 12: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 13: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 14: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 15: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  channel 16: gain 0 (x 1.000), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 70
+  ----------------------------
+  ---------------------------
+   module 2 values
+
+  channel  1: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  2: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  3: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  4: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  5: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  6: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  7: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  8: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  9: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 10: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 11: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 12: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 13: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 14: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 15: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 16: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  ----------------------------
+  ---------------------------
+   module 3 values
+
+  channel  1: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  2: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  3: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  4: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  5: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  6: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  7: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  8: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  9: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 10: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 11: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 12: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 13: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 14: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 15: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 16: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  ----------------------------
+  ---------------------------
+   module 4 values
+
+  channel  1: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel  2: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel  3: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel  4: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  5: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  6: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  7: gain 9 (x 5.987), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 80
+  channel  8: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  9: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel 10: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel 11: gain 9 (x 5.987), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 80
+  channel 12: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel 13: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel 14: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel 15: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel 16: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  ----------------------------
+  ---------------------------
+   module 5 values
+
+  channel  1: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel  2: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  3: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  4: gain 9 (x 5.987), ShT:2, threshold 3 ,( 0.047V, (0.294 % of range), PZ: 80
+  channel  5: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  6: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  7: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 80
+  channel  8: gain 9 (x 5.987), ShT:2, threshold 4 ,( 0.063V, (0.392 % of range), PZ: 80
+  channel  9: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 10: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 11: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 12: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 13: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 14: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 15: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  channel 16: gain 9 (x 5.987), ShT:2, threshold 2 ,( 0.031V, (0.196 % of range), PZ: 128
+  ----------------------------
+  ---------------------------
+   module 6 values
+
+  channel  1: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  2: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  3: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  4: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  5: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  6: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  7: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  8: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  9: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 10: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 11: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 12: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 13: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 14: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 15: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 16: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  ----------------------------
+  ---------------------------
+   module 7 values
+
+  channel  1: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  2: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  3: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  4: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  5: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  6: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel  7: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  8: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel  9: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 10: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 11: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 12: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 13: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 14: gain 8 (x 4.908), threshold 2 ,( 0.031V, (0.196 % of range)
+  channel 15: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  channel 16: gain 8 (x 4.908), threshold 3 ,( 0.047V, (0.294 % of range)
+  ----------------------------
+  ---------------------------
+   module 8 values
+
+  channel  1: gain 7 (x 4.023), ShT:2, threshold 6 ,( 0.094V, (0.588 % of range), PZ: 90
+  channel  2: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  3: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  4: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  5: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  6: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  7: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  8: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel  9: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 10: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 11: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 12: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 13: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 14: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 15: gain 7 (x 4.023), ShT:2, threshold 5 ,( 0.078V, (0.490 % of range), PZ: 90
+  channel 16: gain 7 (x 4.023), ShT:2, threshold 6 ,( 0.094V, (0.588 % of range), PZ: 90
+  ----------------------------
+  ---------------------------
+   module 9 values
+
+  channel  1: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  2: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  3: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  4: gain 7 (x 4.023), threshold 11 ,( 0.173V, (1.078 % of range)
+  channel  5: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  6: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  7: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  8: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel  9: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 10: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 11: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 12: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 13: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 14: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 15: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  channel 16: gain 7 (x 4.023), threshold 12 ,( 0.188V, (1.176 % of range)
+  ----------------------------
+  ---------------------------
+   module 10 values
+
+  channel  1: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel  2: gain 7 (x 4.023), ShT:2, threshold 9 ,( 0.141V, (0.882 % of range), PZ: 90
+  channel  3: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel  4: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel  5: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  channel  6: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  channel  7: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  channel  8: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel  9: gain 7 (x 4.023), ShT:2, threshold 6 ,( 0.094V, (0.588 % of range), PZ: 90
+  channel 10: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  channel 11: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel 12: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  channel 13: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel 14: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel 15: gain 7 (x 4.023), ShT:2, threshold 8 ,( 0.125V, (0.784 % of range), PZ: 90
+  channel 16: gain 7 (x 4.023), ShT:2, threshold 7 ,( 0.110V, (0.686 % of range), PZ: 90
+  ----------------------------
+  ---------------------------
+   module 11 values
+
+  channel  1: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel  2: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel  3: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel  4: gain 7 (x 4.023), threshold 15 ,( 0.235V, (1.471 % of range)
+  channel  5: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel  6: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel  7: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel  8: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel  9: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel 10: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel 11: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel 12: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel 13: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel 14: gain 7 (x 4.023), threshold 16 ,( 0.251V, (1.569 % of range)
+  channel 15: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  channel 16: gain 7 (x 4.023), threshold 17 ,( 0.267V, (1.667 % of range)
+  ----------------------------
+Modules on BUS 1
+  ---------------------------
+   module 0 values
+
+ Range of module:   400
+
+ Channel  |  Polarity  |  Voltage/set [V]  |  Current/Limit [uA]  | On/Off
+  channel 1:    (-)          0.0/120.0              0.000/20.460            OFF 
+  channel 2:    (-)          0.0/0.0              0.000/20.460            OFF 
+  channel 3:    (-)          0.0/60.0              0.000/20.460            OFF 
+  channel 4:    (-)          0.0/230.0              0.000/3.000            OFF 
+  ---------------------------
+   module 1 values
+
+ Range of module:   400
+
+ Channel  |  Polarity  |  Voltage/set [V]  |  Current/Limit [uA]  | On/Off
+  channel 1:    (-)          0.0/20.0              0.000/1.710            OFF 
+  channel 2:    (-)          -19.8/20.0              -0.151/1.340            ON 
+  channel 3:    (-)          0.0/400.0              0.000/9.000            OFF 
+  channel 4:    (-)          0.0/150.0              0.001/8.020            OFF 
+closing serial port... ok.
+
+-------------- MESYTEC DONE   ---------------
+----------------- VME CONFIG ----------------
+daq/f_user/dump_vme.sh: Command not found.
+
+
+----------------- VME DONE   ----------------
+Ending run @ 14:27:41
