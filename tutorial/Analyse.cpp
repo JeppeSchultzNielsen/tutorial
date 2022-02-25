@@ -16,7 +16,7 @@ public:
 
     // This gets called once for each event
     virtual void analyze() override {
-        n+=1;
+        n+=2;
     }
 
     // This is called after all events have been processed
